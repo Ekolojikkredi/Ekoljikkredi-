@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekolojik Kredi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Ekolojik Kredi</h1>
+  <p>Geri dönüşüm yaparak ekolojik kredinizi kazanın!</p>
+</header>
+
+<nav>
+  <a href="#kayit" onclick="showSection('kayit')">Kayıt Ol</a>
+  <a href="#veri-giris" onclick="showSection('veri-giris')">Veri Girişi</a>
+  <a href="#hedefler" onclick="showSection('hedefler')">Hedeflerim</a>
+  <a href="#bilgi" onclick="showSection('bilgi')">Geri Dönüşüm Nedir?</a>
+</nav>
+
+<div class="container">
+  <!-- Kayıt Formu -->
+  <div id="kayit" class="section">
+    <h2>Kayıt Ol</h2>
+    <form id="kayitForm">
+      <label for="isim">Ad:</label>
+      <input type="text" id="isim" required><br>
+      <label for="soyisim">Soyad:</label>
+      <input type="text" id="soyisim" required><br>
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" required><br>
+      <label for="okul">Okul:</label>
+      <input type="text" id="okul" required><br>
+      <button type="submit">Kayıt Ol</button>
+    </form>
+  </div>
+
+  <!-- Atık Veri Girişi -->
+  <div id="veri-giris" class="section">
+    <h2>Atık Veri Girişi</h2>
+    <form id="veriGirisiForm">
+      <label for="atik_turu">Atık Türü:</label>
+      <select id="atik_turu" required>
+        <option value="plastik">Plastik</option>
+        <option value="kağıt">Kağıt</option>
+        <option value="cam">Cam</option>
+        <option value="metal">Metal</option>
+      </select><br>
+      <label for="miktar">Miktar (kg):</label>
+      <input type="number" id="miktar" step="0.01" required><br>
+      <label for="ayristirildi">Atık Türüne Göre Ayrıştırıldı:</label>
+      <select id="ayristirildi" required>
+        <option value="1">Evet</option>
+        <option value="0">Hayır</option>
+      </select><br>
+      <label for="teslim_alan">Teslim Alan:</label>
+      <input type="text" id="teslim_alan" required><br>
+      <button type="submit">Veri Girişi</button>
+    </form>
+  </div>
+
+  <!-- Hedeflerim -->
+  <div id="hedefler" class="section">
+    <h2>Hedeflerim</h2>
+    <p>Toplam Puan: <span id="toplamPuan">0</span></p>
+    <p>Toplam Çevre Dostu Katkı: <span id="cevreDostu">0</span> kg</p>
+  </div>
+
+  <!-- Geri Dönüşüm Nedir? -->
+  <div id="bilgi" class="section">
+    <h2>Geri Dönüşüm Nedir?</h2>
+    <p>
+      Geri dönüşüm, atık malzemelerin yeniden kullanıma kazandırılması işlemidir. Bu işlem, 
+      plastik, kağıt, cam, metal gibi malzemelerin tekrar işlenip yeni ürünler oluşturulmasını 
+      sağlar. Atıkların doğru şekilde ayrıştırılması, çevre kirliliğinin azaltılmasında önemli bir adımdır. 
+      Geri dönüşüm sayesinde, doğal kaynaklar korunur, enerji tasarrufu sağlanır ve sera gazı emisyonları 
+      azalır. Geri dönüşüm yapmak, geleceğe yönelik en büyük yatırımımızdır!
+    </p>
+    <h3>Geri Dönüşümün Faydaları:</h3>
+    <ul>
+      <li><strong>Doğal Kaynakları Korur:</strong> Geri dönüşüm, yeni kaynakların tüketilmesini önler.</li>
+      <li><strong>Enerji Tasarrufu Sağlar:</strong> Geri dönüşüm işlemi, ilk üretimden daha az enerji gerektirir.</li>
+      <li><strong>Çevre Dostu:</strong> Doğal yaşam alanlarını tahrip etmeden, daha az atık bırakır.</li>
+      <li><strong>İstihdam Yaratır:</strong> Geri dönüşüm sektörü, birçok yeni iş alanı oluşturur.</li>
+      <li><strong>Atık Yönetimini Kolaylaştırır:</strong> Atıkların geri dönüşüm süreci, atık yönetiminde verimlilik sağlar.</li>
+    </ul>
+    <p>
+      Geri dönüşümün faydalarını göz önünde bulundurarak, her birey ve kurum bu sürece katkı sağlayabilir. 
+      Geri dönüşüm yapmak, sadece çevreye değil, ekonomiye de büyük katkılar sağlar.
+    </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
